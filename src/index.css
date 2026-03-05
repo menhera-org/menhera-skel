@@ -1,19 +1,4 @@
 
-:root, * {
-  --theme-primary-text-color: #333;
-  --theme-secondary-text-color: #666;
-  --theme-disabled-text-color: #999;
-  --theme-main-background-color: #f5f5f5;
-  --theme-primary-background-color: #ffffff;
-  --theme-accent-color: #3B9EA3;
-  --theme-secondary-accent-color: #d1e7e8;
-  --theme-accent-text-color: #ffffff;
-  --theme-overlay-color: #00000080;
-  --theme-selected-color: #00000030;
-
-  --drawer-width: 20rem;
-}
-
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1;
@@ -69,7 +54,8 @@ input, button, textarea, select {
 }
 
 #app-top-bar-main {
-  flex: 1;
+  flex-shrink: 1;
+  inline-size: auto;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -78,15 +64,13 @@ input, button, textarea, select {
 }
 
 #app-top-bar-side {
-  inline-size: var(--drawer-width);
+  flex-shrink: 1;
+  flex-grow: 1;
+  min-inline-size: 0;
   display: flex;
   align-items: center;
   flex-direction: row;
   transition: inline-size 0.3s ease-in-out;
-}
-
-#app.app-drawer-closed #app-top-bar-side {
-  inline-size: 4rem;
 }
 
 #app-top-bar-branding {
@@ -281,122 +265,4 @@ input, button, textarea, select {
 
 .app-shortcut-item > .text {
   font-size: 80%;
-}
-
-#console-history {
-  display: flex;
-  flex: 1;
-  min-inline-size: 0;
-  flex-direction: column;
-  justify-content: end;
-  padding-block: 1rem;
-  padding-inline: 1rem;
-  max-inline-size: 64rem;
-  margin-inline: auto;
-  inline-size: 100%;
-  font-family: 'Source Code Pro', monospace;
-  box-sizing: border-box;
-  justify-content: end;
-}
-
-.infobox {
-  min-inline-size: 0;
-  padding-block: 1rem;
-  padding-inline: 1rem;
-  max-inline-size: 64rem;
-  margin-inline: auto;
-  inline-size: 100%;
-  box-sizing: border-box;
-  border: solid 1px var(--theme-secondary-text-color);
-}
-
-#console-history > .console-history-command {
-  color: var(--theme-accent-color);
-}
-
-#console-history > * {
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
-}
-
-#console-history .error {
-  color: #ff0000;
-}
-
-#console-input-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--theme-secondary-accent-color);
-  color: var(--theme-accent-color);
-  padding-block: .5rem;
-  max-inline-size: 64rem;
-  margin-inline: auto;
-  border-radius: 1rem;
-  box-sizing: border-box;
-  padding-inline: 1rem;
-  inline-size: 100%;
-  font-family: 'Source Code Pro', monospace;
-  column-gap: .5rem;
-  flex-wrap: wrap;
-  position: sticky;
-  inset-block-end: 0;
-  box-shadow: 0 0 0 1rem var(--theme-main-background-color);
-}
-
-#console-input-wrapper select {
-  display: block;
-  text-align: center;
-  min-inline-size: 0;
-}
-
-#console-input-router-select {
-  display: block;
-  text-align: end;
-  min-inline-size: 0;
-}
-
-#console-input-args {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex: 1;
-  min-inline-size: 50%;
-  padding-inline: .5rem;
-  padding-block: .5rem;
-  background-color: var(--theme-primary-background-color);
-  color: var(--theme-primary-text-color);
-  border-radius: .5rem;
-  box-sizing: border-box;
-}
-
-[data-disabled="true"] #console-input-args {
-  opacity: 0.5;
-}
-
-#console-input-args > input {
-  display: block;
-  text-align: start;
-  min-inline-size: 0;
-  flex: 1;
-  box-sizing: border-box;
-}
-
-#console-input-exec-button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s 0.3s ease-in-out;
-  padding: 0;
-}
-
-.valid #console-input-exec-button {
-  background-color: var(--theme-accent-color);
-  color: var(--theme-accent-text-color);
-}
-
-#console-input-exec-button > .material-symbols-outlined {
-  font-size: 150%;
 }

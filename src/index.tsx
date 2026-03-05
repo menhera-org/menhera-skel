@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import css from './index.css';
+import themeCss from './theme.css';
 import rootCss from './root.css';
 import { App } from './App';
 import store from './app/store';
@@ -16,10 +17,10 @@ const rootElement = document.createElement('div');
 rootElement.id = 'root';
 shadowRoot.append(rootElement);
 const rootStyle = new CSSStyleSheet;
-rootStyle.replaceSync(rootCss);
+rootStyle.replaceSync(themeCss + rootCss);
 document.adoptedStyleSheets = [rootStyle];
 const style = new CSSStyleSheet;
-style.replaceSync(css);
+style.replaceSync(themeCss + css);
 shadowRoot.adoptedStyleSheets = [style];
 const root = createRoot(rootElement);
 root.render(

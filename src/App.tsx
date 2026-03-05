@@ -5,7 +5,6 @@ import { RootState, useAppDispatch } from './app/store';
 import { drawerSlice } from './ui/drawer';
 
 import { DrawerToggleButton } from './components/DrawerToggleButton';
-import { TopBarNavigationControl } from './components/TopBarNavigationControl';
 import { ShortcutItem } from './components/ShortcutItem';
 import { checkValidity, consoleSlice, fetchConfig } from './ui/console';
 import { ScrollBox } from './components/ScrollBox';
@@ -25,7 +24,6 @@ export const App = () => {
           </div>
         </div>
         <div id="app-top-bar-main">
-          <TopBarNavigationControl title="Home" />
         </div>
       </div>
       <ScrollBox id="app-main" onScrollOffsetChange={(offset) => consoleSlice.actions.scrollTo({ offset })} scrollOffset={scrollOffset} scrollOrigin='end'>

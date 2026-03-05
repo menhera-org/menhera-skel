@@ -1,0 +1,20 @@
+
+:root, :host, * {
+  --theme-primary-text-color: #333;
+  --theme-secondary-text-color: #666;
+  --theme-disabled-text-color: #999;
+  --theme-main-background-color: #f5f5f5;
+  --theme-primary-background-color: #ffffff;
+  --theme-accent-color: #ff7335;
+  --theme-secondary-accent-color: #e8e1e0;
+  --theme-accent-text-color: #ffffff;
+  --theme-overlay-color: #00000080;
+  --theme-selected-color: #00000030;
+
+  --drawer-width: 20rem;
+}
+
+a {
+  color: var(--theme-accent-color);
+  text-decoration: none;
+}
