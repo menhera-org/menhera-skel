@@ -46,8 +46,8 @@ input, button, textarea, select {
 #app-top-bar {
   grid-row: top-bar-start / top-bar-end;
   grid-column: app-start / app-end;
-  background-color: var(--theme-accent-color);
-  color: var(--theme-accent-text-color);
+  background-color: var(--theme-accent-text-color);
+  color: var(--theme-accent-color);
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -76,15 +76,23 @@ input, button, textarea, select {
 #app-top-bar-branding {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   flex-direction: row;
   box-sizing: border-box;
   min-inline-size: 0;
   flex: 1;
 }
 
-#app.app-drawer-closed #app-top-bar-branding-logo {
-  opacity: 0;
+#app-top-bar-branding-logo {
+  display: block;
+  max-block-size: 2.5rem;
+  max-inline-size: 12rem;
+  margin-inline-end: .5rem;
+}
+
+#app-top-bar-branding-title {
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 #app-top-bar-navigation {
@@ -111,7 +119,7 @@ input, button, textarea, select {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: var(--theme-secondary-accent-color);
+  background-color: var(--theme-highlight-background-color);
   color: var(--theme-accent-color);
   column-gap: .5rem;
 }
@@ -143,8 +151,8 @@ input, button, textarea, select {
 #app-drawer {
   grid-row: main-start / main-end;
   grid-column: drawer-start / drawer-end;
-  background-color: var(--theme-accent-color);
-  color: var(--theme-accent-text-color);
+  background-color: var(--theme-highlight-background-color);
+  color: var(--theme-secondary-text-color);
   overflow: hidden;
   opacity: 1;
   display: flex;
@@ -180,7 +188,7 @@ input, button, textarea, select {
 
 #app-drawer > #app-drawer-navigation {
   background-color: var(--theme-secondary-accent-color);
-  color: var(--theme-accent-color);
+  color: var(--theme-secondary-text-color);
   flex: 1;
   min-inline-size: 0;
   overflow-inline: hidden;
@@ -242,13 +250,14 @@ input, button, textarea, select {
 
 .app-drawer-toggle-button {
   inline-size: 4rem;
+  color: var(--theme-secondary-text-color);
 }
 
 .app-shortcut-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--theme-accent-text-color);
+  color: var(--theme-secondary-text-color);
   text-decoration: none;
   padding: .5rem;
   border-radius: .5rem;

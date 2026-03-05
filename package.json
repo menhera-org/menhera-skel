@@ -1,7 +1,7 @@
 {
-  "name": "@menhera/generic-social-media-proto-react",
+  "name": "@menhera/menhera-skel",
   "version": "0.1.0",
-  "description": "Generic social media UI prototyping with React",
+  "description": "Experimental Web frontend skeleton shell",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

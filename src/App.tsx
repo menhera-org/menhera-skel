@@ -20,7 +20,8 @@ export const App = () => {
         <div id="app-top-bar-side">
           <DrawerToggleButton />
           <div id="app-top-bar-branding">
-            <div id="app-top-bar-branding-logo"></div>
+            <img id="app-top-bar-branding-logo" src="/image.png" alt="logo"/>
+            <div id="app-top-bar-branding-title">Japan Philosophy Group</div>
           </div>
         </div>
         <div id="app-top-bar-main">
@@ -36,7 +37,7 @@ export const App = () => {
           <ShortcutItem selected={false} href="#" icon="forum" text="Forum" />
         </div>
         <div id="app-drawer-navigation">
-          <h1 id="app-drawer-heading">Site Name</h1>
+          <h1 id="app-drawer-heading">JPhG</h1>
           <slot name="nav"></slot>
         </div>
       </div>

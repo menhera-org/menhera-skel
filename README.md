@@ -1,1 +1,3 @@
-# AS63806 looking glass frontend 
+# menhera-skel
+
+Experimental Web frontend skeleton shell
