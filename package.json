@@ -25,7 +25,6 @@
     "gh-pages": "^6.1.1",
     "sass": "^1.71.1",
     "sass-loader": "^16",
-    "style-loader": "^4",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
     "webpack": "^5.90.3",

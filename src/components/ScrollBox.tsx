@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from "react";
-import { ReactDOM } from "react";
+import ReactDOM from "react-dom";
 import { classList, getClassNameGetter } from "../component-utils";
 
 import "./ScrollBox.css";

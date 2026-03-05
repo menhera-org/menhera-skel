@@ -6,7 +6,7 @@
       "DOM.Iterable",
       "ES2021"
     ],
-    "module": "CommonJS",
+    "module": "Node16",
     "sourceMap": true,
     "declaration": false,
     "newLine": "lf",
@@ -16,7 +16,7 @@
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "skipLibCheck": true,
     "allowJs": true,
     "checkJs": false,

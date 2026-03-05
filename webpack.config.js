@@ -13,13 +13,16 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-        exclude: /node_modules/,
-      },
-      {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          {
+            loader: "css-loader",
+            options: {
+              exportType: "string",
+              esModule: true,
+            },
+          }
+        ],
         exclude: /node_modules/,
       },
     ],
