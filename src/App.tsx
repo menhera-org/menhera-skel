@@ -32,8 +32,8 @@ export const App = () => {
       <div id="app-overlay" onClick={() => dispatch(drawerSlice.actions.closeDrawer())}></div>
       <div id="app-drawer">
         <div id="app-drawer-shortcuts">
-          <ShortcutItem selected={true} href="/" icon="public" text="LG" />
-          <ShortcutItem selected={false} href="https://www.nc.menhera.org/" icon="people" text="NOC" />
+          <ShortcutItem selected={true} href="/" icon="home" text="Home" />
+          <ShortcutItem selected={false} href="#" icon="forum" text="Forum" />
         </div>
         <div id="app-drawer-navigation">
           <h1 id="app-drawer-heading">Site Name</h1>
