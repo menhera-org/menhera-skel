@@ -13,5 +13,8 @@ export const drawerSlice = createSlice({
     closeDrawer: (state) => {
       state.open = false;
     },
+    unsetDrawerState: (state) => {
+      state.open = null;
+    },
   },
 });

@@ -16,6 +16,10 @@ export const App = () => {
   const direction = useSelector((state: RootState) => state.direction.direction);
   const scrollOffset = useSelector((state: RootState) => state.console.scrollOffset);
   const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(drawerSlice.actions.unsetDrawerState());
+  }, [defaultDrawerOpen]);
+  
   return (
     <div id="app" className={drawerIsOpen ? 'app-drawer-open' : 'app-drawer-closed'} dir={direction}>
       <div id="app-top-bar">
