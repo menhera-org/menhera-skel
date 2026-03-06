@@ -199,6 +199,7 @@ input, button, textarea, select {
   overflow-block: auto;
   border-block-start: solid var(--theme-accent-color) .125rem;
   border-inline-start: solid var(--theme-accent-color) .125rem;
+  border-start-start-radius: 1rem;
 }
 
 #app-drawer-heading {
@@ -208,14 +209,6 @@ input, button, textarea, select {
   padding-inline: 1rem;
   font-weight: bold;
   font-size: 150%;
-}
-
-#app-drawer > #app-drawer-navigation:dir(ltr) {
-  border-top-left-radius: 1rem;
-}
-
-#app-drawer > #app-drawer-navigation:dir(rtl) {
-  border-top-right-radius: 1rem;
 }
 
 @media (min-width: 40rem) {
