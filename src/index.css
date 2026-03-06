@@ -139,6 +139,7 @@ input, button, textarea, select {
   overflow: auto;
   display: flex;
   flex-direction: column;
+  border-block-start: solid var(--theme-accent-color) .125rem;
 }
 
 #app-main-inner {
@@ -196,6 +197,8 @@ input, button, textarea, select {
   min-inline-size: 0;
   overflow-inline: hidden;
   overflow-block: auto;
+  border-block-start: solid var(--theme-accent-color) .125rem;
+  border-inline-start: solid var(--theme-accent-color) .125rem;
 }
 
 #app-drawer-heading {
@@ -226,6 +229,20 @@ input, button, textarea, select {
 
   #app.app-drawer-open {
     grid-template-columns: [app-start drawer-start] var(--drawer-width) [drawer-end main-start] 1fr [main-end app-end];
+  }
+}
+
+@media print {
+  #app {
+    grid-template-columns: [app-start main-start drawer-start] 0 [drawer-end] 1fr [main-end app-end] !important;
+  }
+
+  #root {
+    background-color: unset !important;
+  }
+
+  .app-drawer-toggle-button {
+    display: none !important;
   }
 }
 
