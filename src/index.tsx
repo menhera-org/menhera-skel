@@ -1,12 +1,14 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import css from './index.css';
-import themeCss from './theme.css';
+import commonCss from './common.css';
 import rootCss from './root.css';
 import { App } from './App';
 import store from './app/store';
 import { Provider } from 'react-redux';
 import { directionSlice, Direction } from './ui/direction';
+import { varsToStyleSheet, createStyleSheet } from './app/stylesheet';
+import { config } from './app/config';
 
 const shadowRoot = document.body.attachShadow({mode: 'closed'});
 const googleFontLink = document.createElement('link');
@@ -16,12 +18,19 @@ shadowRoot.append(googleFontLink);
 const rootElement = document.createElement('div');
 rootElement.id = 'root';
 shadowRoot.append(rootElement);
-const rootStyle = new CSSStyleSheet;
-rootStyle.replaceSync(themeCss + rootCss);
-document.adoptedStyleSheets = [rootStyle];
-const style = new CSSStyleSheet;
-style.replaceSync(themeCss + css);
-shadowRoot.adoptedStyleSheets = [style];
+
+document.adoptedStyleSheets = [
+  varsToStyleSheet(config.css_vars),
+  createStyleSheet(commonCss),
+  createStyleSheet(rootCss),
+];
+
+shadowRoot.adoptedStyleSheets = [
+  varsToStyleSheet(config.css_vars),
+  createStyleSheet(commonCss),
+  createStyleSheet(css),
+];
+
 const root = createRoot(rootElement);
 root.render(
   <Provider store={store}>
