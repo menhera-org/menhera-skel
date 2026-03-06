@@ -6,7 +6,7 @@ import { drawerSlice } from './ui/drawer';
 
 import { DrawerToggleButton } from './components/DrawerToggleButton';
 import { ShortcutItem } from './components/ShortcutItem';
-import { checkValidity, consoleSlice, fetchConfig } from './ui/console';
+import { consoleSlice } from './ui/console';
 import { ScrollBox } from './components/ScrollBox';
 
 export const App = () => {
