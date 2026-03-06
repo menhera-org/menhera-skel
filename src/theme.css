@@ -19,6 +19,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
 hr {
   border-style: solid;
   border-color: var(--theme-secondary-text-color);
