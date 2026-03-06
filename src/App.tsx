@@ -19,15 +19,18 @@ export const App = () => {
   useEffect(() => {
     dispatch(drawerSlice.actions.unsetDrawerState());
   }, [defaultDrawerOpen]);
-  
+
+  useEffect(() => {
+    document.documentElement.dir = direction;
+  }, [direction]);
+
   return (
-    <div id="app" className={drawerIsOpen ? 'app-drawer-open' : 'app-drawer-closed'} dir={direction}>
+    <div id="app" className={drawerIsOpen ? 'app-drawer-open' : 'app-drawer-closed'}>
       <div id="app-top-bar">
         <div id="app-top-bar-side">
           <DrawerToggleButton />
           <div id="app-top-bar-branding">
             <img id="app-top-bar-branding-logo" src="/image.png" alt="logo"/>
-            <div id="app-top-bar-branding-title">Japan Philosophy Group</div>
           </div>
         </div>
         <div id="app-top-bar-main">

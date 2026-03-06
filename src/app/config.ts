@@ -27,8 +27,12 @@ export interface SiteConfig {
   base_url: string;
 }
 
+export type CssVars = Record<string, string>;
+
 export interface Config {
-  css_vars: Record<string, string>;
+  site_config: Partial<SiteConfig>;
+  css_vars: CssVars;
+  themes: Record<string, CssVars>;
 }
 
 export const config: Config = jsonFromScript(configElement);
