@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState, useAppDispatch } from './app/store';
 import { drawerSlice } from './ui/drawer';
@@ -8,9 +8,11 @@ import { DrawerToggleButton } from './components/DrawerToggleButton';
 import { ShortcutItem } from './components/ShortcutItem';
 import { consoleSlice } from './ui/console';
 import { ScrollBox } from './components/ScrollBox';
+import { useMediaQuery } from './app/media';
 
 export const App = () => {
-  const drawerIsOpen = useSelector((state: RootState) => state.drawer.open);
+  const defaultDrawerOpen = useMediaQuery('(min-width: 40rem)');
+  const drawerIsOpen = useSelector((state: RootState) => state.drawer.open) ?? defaultDrawerOpen;
   const direction = useSelector((state: RootState) => state.direction.direction);
   const scrollOffset = useSelector((state: RootState) => state.console.scrollOffset);
   const dispatch = useAppDispatch();
