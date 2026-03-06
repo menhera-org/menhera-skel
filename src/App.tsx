@@ -27,8 +27,10 @@ export const App = () => {
         <div id="app-top-bar-main">
         </div>
       </div>
-      <ScrollBox id="app-main" onScrollOffsetChange={(offset) => consoleSlice.actions.scrollTo({ offset })} scrollOffset={scrollOffset} scrollOrigin='end'>
-        <slot name="main"></slot>
+      <ScrollBox id="app-main" onScrollOffsetChange={(offset) => consoleSlice.actions.scrollTo({ offset })} scrollOffset={scrollOffset} scrollOrigin='start'>
+        <div id="app-main-inner">
+          <slot name="main"></slot>
+        </div>
       </ScrollBox>
       <div id="app-overlay" onClick={() => dispatch(drawerSlice.actions.closeDrawer())}></div>
       <div id="app-drawer">
