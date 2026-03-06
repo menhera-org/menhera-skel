@@ -18,3 +18,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+hr {
+  border-style: solid;
+  border-color: var(--theme-secondary-text-color);
+}
